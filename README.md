@@ -1,1 +1,290 @@
-# Calculator
+# Modern C++ Modular Calculator
+
+A small but well-structured calculator project written in Modern C++.
+
+This project demonstrates important software engineering concepts including:
+
+- Tokenization (Lexical Analysis)
+- Recursive Descent Parsing
+- Operator Precedence
+- Error Handling
+- Modular Design
+- Clean Architecture
+- Modern C++ Practices
+
+---
+
+# Features
+
+✅ Integer support  
+✅ Floating-point support  
+✅ Operators:
+
+- `+`
+- `-`
+- `*`
+- `/`
+
+✅ Parentheses support  
+✅ Operator precedence  
+✅ Interactive REPL loop  
+✅ Graceful error handling  
+✅ Modular architecture  
+
+---
+
+# Example
+
+```text
+> 2 + 3 * 4
+14
+
+> (4 + 5) * 6
+54
+
+> 2.5 * 4
+10
+
+> 10 / 0
+Error: Division by zero
+```
+
+---
+
+# Project Structure
+
+```text
+CalculatorModular/
+│
+├── calculator.cpp
+├── Token.hpp
+├── Tokenizer.hpp
+├── Tokenizer.cpp
+├── Parser.hpp
+├── Parser.cpp
+├── CMakeLists.txt
+└── README.md
+```
+
+---
+
+# Architecture
+
+The calculator is divided into multiple layers:
+
+```text
+User Input
+    ↓
+Tokenizer (Lexer)
+    ↓
+Parser
+    ↓
+Evaluator
+    ↓
+Result
+```
+
+This separation makes the project:
+
+- easier to understand,
+- easier to debug,
+- easier to extend,
+- closer to real-world software systems.
+
+---
+
+# Tokenizer
+
+The tokenizer converts raw text into tokens.
+
+Example:
+
+```text
+(4 + 5) * 6
+```
+
+becomes:
+
+```text
+LEFT_PAREN
+NUMBER(4)
+PLUS
+NUMBER(5)
+RIGHT_PAREN
+MULTIPLY
+NUMBER(6)
+```
+
+---
+
+# Parser
+
+The parser uses **Recursive Descent Parsing**.
+
+Grammar:
+
+```text
+expression -> term ((+ | -) term)*
+term       -> factor ((* | /) factor)*
+factor     -> NUMBER | '(' expression ')'
+```
+
+This naturally handles operator precedence.
+
+Example:
+
+```text
+2 + 3 * 4
+```
+
+is interpreted as:
+
+```text
+2 + (3 * 4)
+```
+
+---
+
+# Supported Expressions
+
+## Valid
+
+```text
+1 + 2
+10 - 3 * 2
+(4 + 5) * 6
+18 / 3 + 7
+2.5 * 4
+```
+
+## Invalid
+
+```text
+1 +
+* 3
+(2 + 5
+10 / 0
+abc
+```
+
+---
+
+# Build Instructions
+
+## Using g++
+
+```bash
+g++ -std=c++17 main.cpp Tokenizer.cpp Parser.cpp -o calculator
+```
+
+## Using clang++
+
+```bash
+clang++ -std=c++17 main.cpp Tokenizer.cpp Parser.cpp -o calculator
+```
+
+---
+
+# Run
+
+```bash
+./calculator
+```
+
+---
+
+# Sample Run
+
+```text
+Modern C++ Calculator
+Type 'exit' to quit
+
+> 1 + 2
+3
+
+> 2 + 3 * 4
+14
+
+> (4 + 5) * 6
+54
+
+> 10 / 0
+Error: Division by zero
+
+> exit
+```
+
+---
+
+# CMake Build
+
+## Generate Build Files
+
+```bash
+cmake -S . -B build
+```
+
+## Build
+
+```bash
+cmake --build build
+```
+
+## Run
+
+```bash
+./build/Calculator
+```
+
+---
+
+# Concepts Learned
+
+This project teaches:
+
+- Modern C++ project structure
+- Recursive descent parsing
+- Expression evaluation
+- Operator precedence
+- Error handling
+- Modular programming
+- Separation of concerns
+- REPL applications
+- Clean code organization
+
+---
+
+# Future Improvements
+
+Possible extensions:
+
+- Unary minus
+- Power operator (`^`)
+- Variables
+- Functions (`sin`, `cos`, `sqrt`)
+- Abstract Syntax Tree (AST)
+- Scientific calculator mode
+- History support
+- Command system
+- Unit tests
+
+---
+
+# Technologies Used
+
+- C++17
+- Standard Template Library (STL)
+- Recursive Descent Parsing
+- CMake
+
+---
+
+# Author
+
+Sagar Rathode
+
+---
+
+# License
+
+This project is open source and available under the MIT License.
