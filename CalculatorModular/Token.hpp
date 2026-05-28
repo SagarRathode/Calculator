@@ -12,6 +12,8 @@ enum class TokenType
     Divide,
     LeftParen,
     RightParen,
+    Module,
+    Power,
     End
 };
 
