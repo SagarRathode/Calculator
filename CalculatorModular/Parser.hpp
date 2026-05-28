@@ -16,6 +16,7 @@ private:
     double parseExpression();
     double parseTerm();
     double parseFactor();
+    double parsePower();
 
 private:
     Tokenizer m_tokenizer;
