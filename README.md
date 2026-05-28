@@ -190,8 +190,11 @@ g++ -std=c++17 main.cpp Tokenizer.cpp Parser.cpp -o calculator
 
 ```bash
 clang++ -std=c++17 main.cpp Tokenizer.cpp Parser.cpp -o calculator
+./calculator
 ```
-
+```
+clang++ -std=c++17 calculator.cpp Tokenizer.cpp ParserAST.cpp -o calculator
+./calculator
 ---
 
 # Run
