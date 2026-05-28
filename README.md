@@ -24,6 +24,7 @@ This project demonstrates important software engineering concepts including:
 - `-`
 - `*`
 - `/`
+- `^`
 
 ✅ Parentheses support  
 ✅ Operator precedence  
