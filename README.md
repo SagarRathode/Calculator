@@ -1,4 +1,4 @@
-# Modern C++ Modular Calculator
+
 
 A small but well-structured calculator project written in Modern C++.
 
@@ -35,6 +35,11 @@ This project demonstrates important software engineering concepts including:
 ---
 
 # Example
+
+
+<img width="1536" height="1024" alt="architecture" src="https://github.com/user-attachments/assets/ec2c38ff-b61a-4e09-9a26-93abe527ae26" />
+
+# Modern C++ Modular Calculator
 
 ```text
 > 2 + 3 * 4
