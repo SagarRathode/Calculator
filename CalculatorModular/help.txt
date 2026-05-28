@@ -24,6 +24,26 @@ clang++ -std=c++17 calculator.cpp Tokenizer.cpp Parser.cpp -o calculator
 14
 
 
+
+//****************************************************************************
+//using AST and binaryOPcode
+//added 5 files and use STL unique_ptr  ParserAST.hpp  ParserAST.cpp ASTNode.hpp BinaryOpNode.hpp NumberNode.hpp
+clang++ -std=c++17 calculator.cpp Tokenizer.cpp ParserAST.cpp -o calculator
+
+in next phase 
+Now you can easily add:
+variables
+functions
+if statements
+loops
+compiler optimizations
+bytecode generation
+LLVM backend
+This is how real interpreters and compilers work.
+
+
+//****************************************************************************
+
 Design Advantages
 This modular design gives you:
 clean separation of responsibility,
