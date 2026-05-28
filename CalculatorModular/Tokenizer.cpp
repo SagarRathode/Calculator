@@ -77,6 +77,10 @@ Token Tokenizer::getNextToken()
 
         case ')':
             return Token(TokenType::RightParen);
+        case '%':
+            return Token(TokenType::Module);
+        case '^':
+            return Token(TokenType::Power);
 
         default:
             throw std::runtime_error("Invalid character");
